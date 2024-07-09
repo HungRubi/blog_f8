@@ -9,6 +9,15 @@ const port = 3001;
 
 const app = express();
 
+//sử dụng json
+app.use(express.json());
+
+//console.log json - method: POST
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
+);
 app.use(morgan('combined'));
 
 app.use(express.static(path.join(__dirname, 'public')));

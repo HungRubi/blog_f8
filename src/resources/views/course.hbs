@@ -1,3 +1,16 @@
 <div class="mt-4">
-    <h1 class="text-center">COURSE</h1>
+    {{#each course}}
+    <div class="card" style="width: 20rem;">
+        <a href="/course/{{this.slug}}">
+            <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+        </a>
+        <div class="card-body">
+            <a href="/course/{{this.slug}}">
+                <h5 class="card-title text-truncate">{{this.name}}</h5>
+            </a>
+            <p class="card-text">{{this.description}}</p>
+            <a href="/course/{{this.slug}}" class="btn btn-primary">Học Ngay</a>
+        </div>
+    </div>
+    {{/each}}
 </div>
